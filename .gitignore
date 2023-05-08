@@ -50,3 +50,12 @@
 
 # Embedded web-server pid file
 /.web-server-pid
+
+# python cache
+/python/__pycache__/*
+
+# data
+/data/forecast/*
+
+#phpstorm
+/.idea/*
