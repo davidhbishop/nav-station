@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Conwy",
+    "type": "home",
+    "keys": [
+      {
+        "tide-times": "conwy",
+        "tidal": "0471A",
+        "gate": [
+          {
+            "open": "-3",
+            "close": "+3"
+          }
+        ],
+        "tide-range": [
+          {
+            "lowest": "-0.1",
+            "highest": "9.3"
+          }
+        ],
+        "metoffice-data": "351005"
+      }
+    ]
+  },
+  {
+    "name": "Holyhead",
+    "type": "table",
+    "keys": [
+      {
+        "tide-times": "holyhead",
+        "metoffice-data": "gckxq8ehx"
+      }
+    ]
+  }
+]
