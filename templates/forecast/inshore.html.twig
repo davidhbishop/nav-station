@@ -6,21 +6,38 @@
         <div class="uk-grid">
             <div class="uk-width-1-1">
                 <div class="uk-text-bold">
-                    Location
+                    {{ forecast.area }}
                 </div>
             </div>
             <div class="uk-width-1-1">
                 <div class="uk-alert-danger uk-text-bold">
-                    Warning
+                    {{ forecast.warning }}
                 </div>
             </div>
             <div class="uk-width-1-6 uk-text-bold">
-                Wind
+                WIND
             </div>
             <div class="uk-width-5-6">
-                {{ wind }}
+                {{ forecast.forecast.wind }}
             </div>
-            <?php endforeach; ?>
+            <div class="uk-width-1-6 uk-text-bold">
+                SEA
+            </div>
+            <div class="uk-width-5-6">
+                {{ forecast.forecast.sea }}
+            </div>
+            <div class="uk-width-1-6 uk-text-bold">
+                WEATHER
+            </div>
+            <div class="uk-width-5-6">
+                {{ forecast.forecast.weather }}
+            </div>
+            <div class="uk-width-1-6 uk-text-bold">
+                VISIBILITY
+            </div>
+            <div class="uk-width-5-6">
+                {{ forecast.forecast.visibility }}
+            </div>
         </div>
     </div>
 </div>

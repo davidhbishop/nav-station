@@ -10,29 +10,37 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class InshoreForecastController extends AbstractController
 {
-    #[Route('/inshore-forecast')]
-    public function forecast(): Response
-    {
+    private DateCalculator $dateCalculator;
+    private DataService $dataService;
+
+    public function __construct(DateCalculator $dateCalculator, DataService $dataService){
         $dataPath = __DIR__.'/../../data/forecast';
-        $dateCalculator = new DateCalculator();
-        $area = 10;
+        $this->dataService = $dataService;
+        $this->dateCalculator = $dateCalculator;
+
+        $this->dataService->setDataPath($dataPath);
+
+    }
+
+    #[Route('/inshore-forecast/{area}')]
+    public function forecast($area): Response
+    {
         $forecast = '';
 
-        $dataService = new DataService($dataPath);
-        $dataService->setData(
-            $dateCalculator->getToday(),
-            $dateCalculator->getTime(),
+        $this->dataService->setData(
+            $this->dateCalculator->getToday(),
+            $this->dateCalculator->getTime(),
             'inshore-forecast',
             $area
         );
 
-        if ($dataService->getFile()) {
-            $forecast_string = $dataService->getString();
+        if ($this->dataService->getFile()) {
+            $forecast_string = $this->dataService->getString();
             $forecast = json_decode($forecast_string, true);
         }
 
         return $this->render('forecast/inshore.html.twig', [
-            'wind' => $forecast['forecast']['wind'],
+            'forecast' => $forecast,
         ]);
 
     }

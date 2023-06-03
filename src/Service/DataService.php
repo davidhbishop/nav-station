@@ -27,11 +27,14 @@ class DataService
     private $fileJson;
 
 
-    public function __construct(string $dataPath)
+    public function __construct()
     {
-        $this->dataPath = $dataPath;
 
     }//end __construct()
+
+    public function setDataPath(string $dataPath) {
+        $this->dataPath = $dataPath;
+    }
 
 
     public function setData(string $date, string $time, string $type, string $subType=null)
