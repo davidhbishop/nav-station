@@ -1,0 +1,28 @@
+{# templates/forecast/tidal.html.twig #}
+{{ include('system/head.html.twig') }}
+
+<div class="uk-width-1-1">
+    <div class="uk-panel uk-panel-box uk-margin-top">
+        <h2 class="uk-panel-title">Tide table at {{ area|title }}</h2>
+        <table class="uk-table uk-table-striped">
+            <tr><th>Time</th><th>Event</th></tr>
+
+            {% for event in events %}
+                <tr>
+                    <td>{{ event.time }}</td>
+                    {% if event.type == 'LowWater' %}
+                        <td>Low water <strong>{{ event.depth }}m</strong></td>
+                    {% elseif event.type == 'HighWater' %}
+                        <td>High water <strong>{{ event.depth }}m</strong></td>
+                    {% elseif event.type == 'gateclose' %}
+                        <td>Gate closing</td>
+                    {% elseif event.type == 'gateopen' %}
+                        <td>Gate opening</td>
+                    {% else %}
+                        <td>{{ event.type }}</td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>

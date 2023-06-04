@@ -69,9 +69,11 @@ class DataService
     public function getFile(): bool
     {
         if ($this->pathSet) {
-            $this->fileString = file_get_contents($this->filePath, FILE_USE_INCLUDE_PATH);
-            $this->fileJson   = json_decode($this->fileString, true);
-            return true;
+            if (file_exists($this->filePath)) {
+                $this->fileString = file_get_contents($this->filePath, FILE_USE_INCLUDE_PATH);
+                $this->fileJson = json_decode($this->fileString, true);
+                return true;
+            }
         }
         return false;
 
@@ -85,6 +87,49 @@ class DataService
     public function getJSON(): array
     {
         return $this->fileJson;
+    }
+
+    /**
+     * Get files
+     */
+    public function getFiles($date,$area, array $filters): array
+    {
+        $files = [];
+        $path = $this->dataPath . '/' . $date;
+
+        if (is_dir($path)) {
+
+            $all_files = scandir($path);
+
+            foreach ($all_files as $file) {
+                if (strpos($file, $area)) {
+                    foreach ($filters as $filter) {
+                        if (strpos($file, $filter)) {
+                            $files[] = $file;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        return $files;
+
+    }
+
+    /**
+     * Get json file
+     */
+    public function getJsonFile($date, $file) {
+        $this->filePath = $this->dataPath . '/' . $date . '/' . $file;
+        $this->pathSet = true;
+
+        if ($this->getFile()) {
+            return $this->fileJson;
+        } else {
+            return null;
+        }
+
     }
 
 

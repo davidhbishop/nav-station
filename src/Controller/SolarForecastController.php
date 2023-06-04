@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class InshoreForecastController extends AbstractController
+class SolarForecastController extends AbstractController
 {
     private DateCalculator $dateCalculator;
     private DataService $dataService;
@@ -22,32 +22,30 @@ class InshoreForecastController extends AbstractController
 
     }
 
-    #[Route('/forecast/inshore/{date}/{area}')]
+    #[Route('/forecast/solar/{date}/{area}')]
     public function forecast($date, $area): Response
     {
-        $time = $this->dateCalculator->getTime();
         if ($date == 'latest') {
             $date = $this->dateCalculator->getToday();
         }
+        $filters = ['sunset','sunrise','moonrise','moonset'];
 
-        $this->dataService->setData(
-            $date,
-            $time,
-            'inshore-forecast',
-            $area
-        );
+        $files = $this->dataService->getFiles($date, $area, $filters);
 
-        if ($this->dataService->getFile()) {
-                $forecast = $this->dataService->getJSON();
-                return $this->render('forecast/inshore.html.twig', [
-                    'forecast' => $forecast,
-                ]);
+        if (count($files) > 0 ) {
+            foreach($files as $file) {
+                $events[] = $this->dataService->getJsonFile($date, $file);
+            }
+
+            return $this->render('forecast/solar.html.twig', [
+                'events' => $events,
+                'area' => $area
+            ]);
         } else {
             return $this->render('system/error.html.twig');
         }
 
 
     }
-
 
 }

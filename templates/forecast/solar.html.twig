@@ -1,0 +1,28 @@
+{# templates/forecast/tidal.html.twig #}
+{{ include('system/head.html.twig') }}
+
+<div class="uk-width-1-1">
+    <div class="uk-panel uk-panel-box uk-margin-top">
+        <h2 class="uk-panel-title">Solar times at {{ area|title }}</h2>
+        <table class="uk-table uk-table-striped">
+            <tr><th>Time</th><th>Event</th></tr>
+
+            {% for event in events %}
+                <tr>
+                    <td>{{ event.time }}</td>
+                    {% if event.type == 'moonset' %}
+                        <td>Moon setting</td>
+                    {% elseif event.type == 'moonrise' %}
+                        <td>{{ event.phase }} rising</td>
+                    {% elseif event.type == 'sunrise' %}
+                        <td>Sun rising</td>
+                    {% elseif event.type == 'sunset' %}
+                        <td>Sun setting</td>
+                    {% else %}
+                        <td>{{ event.type }}</td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
