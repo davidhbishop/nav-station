@@ -16,12 +16,35 @@ class CalendarController extends AbstractController
         $this->dateCalculator = $dateCalculator;
     }
 
-    #[Route('/calendar/{year}/{month}')]
-    public function calendar($year, $month): Response
+    #[Route('/')]
+    public function homepage(): Response
+    {
+        $year = $this->dateCalculator->getYear();
+        $month = $this->dateCalculator->getMonth();
+        return $this->render('home.html.twig', [
+            'year' => $year,
+            'month' => $month
+        ]);
+    }
+
+    #[Route('/cal/{year}/{month}')]
+    public function month($year, $month): Response
     {
         $days = $this->dateCalculator->getMonthDays($year, $month);
-        return $this->render('calendar.html.twig', [
+        return $this->render('month.html.twig', [
             'days' => $days,
+            'year' => $year,
+            'month' => $month
+        ]);
+    }
+
+    #[Route('/cal/{date}')]
+    public function day($date): Response
+    {
+        $year = $this->dateCalculator->extractYear($date);
+        $month = $this->dateCalculator->extractMonth($date);
+        return $this->render('day.html.twig', [
+            'date' => $date,
             'year' => $year,
             'month' => $month
         ]);

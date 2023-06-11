@@ -1,0 +1,25 @@
+{# templates/calendar.html.twig #}
+{{ include('system/head.html.twig') }}
+
+<nav class="uk-navbar-container">
+    <div class="uk-container" >
+        <div uk-navbar>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/cal/{{ date }}">{{ date }}</a></li>
+                    <li><a href="/forecast/tidal/{{ date }}">Go to tides</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+{% for key, forecast in forecasts %}
+    <div>
+        <a class="uk-button-primary uk-button uk-width-1-1 uk-text-left"
+           href="/forecast/inshore/{{ date }}/{{ key }}">{{ forecast.area }}</a>
+    </div>
+{% endfor %}

@@ -20,9 +20,13 @@ class LocationController extends AbstractController
     #[Route('/locations/{date}')]
     public function locations($date): Response
     {
+        $year = substr($date, 0, 4);
+        $month = substr($date, 2, 2);
         $locations = $this->locationService->getLocations();
-        return $this->render('calendar.html.twig', [
+        return $this->render('locations.html.twig', [
             'date' => $date,
+            'year' => $year,
+            'month' => $month,
             'locations' => $locations,
         ]);
     }

@@ -1,0 +1,56 @@
+{# templates/forecast/inshore.html.twig #}
+{{ include('system/head.html.twig') }}
+
+<nav class="uk-navbar-container">
+    <div class="uk-container" >
+        <div uk-navbar>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/cal/{{ date }}">{{ date }}</a></li>
+                    <li class="uk-active"><a href="/forecast/inshore/{{ date }}">Inshore</a></li>
+                    <li><a href="/forecast/tidal/{{ date }}">Go to tides</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="uk-grid">
+    <div class="uk-width-1-1 uk-margin-bottom">
+        <div class="uk-text-bold">
+            {{ forecast.area }}
+        </div>
+    </div>
+    <div class="uk-width-1-1 uk-margin-bottom">
+        <div class="uk-alert-danger uk-text-bold">
+            {% if forecast.warnings is defined %}
+                {{ forecast.warnings }}
+            {% endif %}
+        </div>
+    </div>
+    <div class="uk-width-1-4 uk-text-bold uk-margin-bottom">
+        WIND
+    </div>
+    <div class="uk-width-3-4 uk-margin-bottom">
+        {{ forecast.forecast.wind }}
+    </div>
+    <div class="uk-width-1-4 uk-text-bold uk-margin-bottom">
+        SEA
+    </div>
+    <div class="uk-width-3-4 uk-margin-bottom">
+        {{ forecast.forecast.sea }}
+    </div>
+    <div class="uk-width-1-4 uk-text-bold uk-margin-bottom">
+        WEATHER
+    </div>
+    <div class="uk-width-3-4 uk-margin-bottom">
+        {{ forecast.forecast.weather }}
+    </div>
+    <div class="uk-width-1-4 uk-text-bold uk-margin-bottom">
+        VISIBILITY
+    </div>
+    <div class="uk-width-3-4 uk-margin-bottom">
+        {{ forecast.forecast.visibility }}
+    </div>
+</div>

@@ -25,6 +25,8 @@ class SolarForecastController extends AbstractController
     #[Route('/forecast/solar/{date}/{location}')]
     public function forecast($date, $location): Response
     {
+        $year = substr($date, 0, 4);
+        $month = substr($date, 2, 2);
         if ($date == 'latest') {
             $date = $this->dateCalculator->getToday();
         }
@@ -39,7 +41,10 @@ class SolarForecastController extends AbstractController
 
             return $this->render('forecast/solar.html.twig', [
                 'events' => $events,
-                'location' => $location
+                'location' => $location,
+                'date' => $date,
+                'year' => $year,
+                'month' => $month
             ]);
         } else {
             return $this->render('system/error.html.twig');

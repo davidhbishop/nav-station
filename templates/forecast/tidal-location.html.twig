@@ -1,9 +1,22 @@
 {# templates/forecast/tidal.html.twig #}
 {{ include('system/head.html.twig') }}
 
+<div class="uk-container" >
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/cal/{{ date }}">{{ date }}</a></li>
+                <li class="uk-active"><a href="/forecast/tidal/{{ date }}">Tides</a></li>
+                <li><a href="/forecast/inshore/{{ date }}">Go to Inshore</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
 <div class="uk-width-1-1">
     <div class="uk-panel uk-panel-box uk-margin-top">
-        <h2 class="uk-panel-title">Tide table at {{ location|title }}</h2>
+        <h2 class="uk-panel-title">Tide table at {{ location|title }} on {{ date }}</h2>
         <table class="uk-table uk-table-striped">
             <tr><th>Time</th><th>Event</th></tr>
 

@@ -25,6 +25,25 @@ class DateCalculator
 
     }//end getToday()
 
+    public function getYear()
+    {
+        $currentDay = date_create();
+        return date_format($currentDay,'Y');
+    }
+
+    public function getMonth(){
+        $currentDay = date_create();
+        return date_format($currentDay, 'm');
+    }
+
+    public function extractYear($date) {
+        return substr($date, 0, 4);
+    }
+
+    public function extractMonth($date) {
+        return substr($date, 4, 2);
+    }
+
 
     /**
      * Get time

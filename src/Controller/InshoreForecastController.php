@@ -22,9 +22,44 @@ class InshoreForecastController extends AbstractController
 
     }
 
-    #[Route('/forecast/inshore/{date}/{area}')]
-    public function forecast($date, $area): Response
+    #[Route('/forecast/inshore/{date}')]
+    public function list($date): Response
     {
+
+        $filters = ['forecast'];
+        $year = $this->dateCalculator->extractYear($date);
+        $month = $this->dateCalculator->extractMonth($date);
+
+        $files = $this->dataService->getFiles($date, 'inshore', $filters);
+
+        if (count($files) > 0 ) {
+            foreach($files as $file) {
+                $file_key = $file;
+                $file_key = str_replace('0000-inshore-forecast-','',$file_key);
+                $file_key = str_replace('.json','',$file_key);
+                $forecasts[$file_key] = $this->dataService->getJsonFile($date, $file);
+            }
+
+            ksort($forecasts);
+
+            return $this->render('forecast/inshore-list.html.twig',
+                [
+                    'date' => $date,
+                    'forecasts' => $forecasts,
+                    'year' => $year,
+                    'month' => $month,
+                ]);
+        } else {
+            return $this->render('system/error.html.twig');
+        }
+
+    }
+
+    #[Route('/forecast/inshore/{date}/{area}')]
+    public function area($date, $area): Response
+    {
+        $year = $this->dateCalculator->extractYear($date);
+        $month = $this->dateCalculator->extractMonth($date);
         $time = $this->dateCalculator->getTime();
         if ($date == 'latest') {
             $date = $this->dateCalculator->getToday();
@@ -39,8 +74,11 @@ class InshoreForecastController extends AbstractController
 
         if ($this->dataService->getFile()) {
                 $forecast = $this->dataService->getJSON();
-                return $this->render('forecast/inshore.html.twig', [
+                return $this->render('forecast/inshore-area.html.twig', [
                     'forecast' => $forecast,
+                    'date' => $date,
+                    'year' => $year,
+                    'month' => $month,
                 ]);
         } else {
             return $this->render('system/error.html.twig');
