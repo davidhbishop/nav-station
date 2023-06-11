@@ -92,7 +92,7 @@ class DataService
     /**
      * Get files
      */
-    public function getFiles($date,$area, array $filters): array
+    public function getFiles($date,$location, array $filters): array
     {
         $files = [];
         $path = $this->dataPath . '/' . $date;
@@ -102,7 +102,7 @@ class DataService
             $all_files = scandir($path);
 
             foreach ($all_files as $file) {
-                if (strpos($file, $area)) {
+                if (strpos($file, $location)) {
                     foreach ($filters as $filter) {
                         if (strpos($file, $filter)) {
                             $files[] = $file;

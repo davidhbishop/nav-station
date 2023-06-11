@@ -22,15 +22,15 @@ class TidalForecastController extends AbstractController
 
     }
 
-    #[Route('/forecast/tidal/{date}/{area}')]
-    public function forecast($date, $area): Response
+    #[Route('/forecast/tidal/{date}/{location}')]
+    public function forecast($date, $location): Response
     {
         if ($date == 'latest') {
             $date = $this->dateCalculator->getToday();
         }
         $filters = ['highwater','lowwater','gateopen','gateclose'];
 
-        $files = $this->dataService->getFiles($date, $area, $filters);
+        $files = $this->dataService->getFiles($date, $location, $filters);
 
         if (count($files) > 0 ) {
             foreach($files as $file) {
@@ -39,7 +39,7 @@ class TidalForecastController extends AbstractController
 
             return $this->render('forecast/tidal.html.twig', [
                 'events' => $events,
-                'area' => $area
+                'location' => $location
             ]);
         } else {
             return $this->render('system/error.html.twig');

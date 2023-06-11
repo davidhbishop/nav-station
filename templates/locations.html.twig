@@ -1,0 +1,12 @@
+{# templates/forecast/tidal.html.twig #}
+{{ include('system/head.html.twig') }}
+
+<div class="uk-width-1-1">
+    <div class="uk-panel uk-panel-box uk-margin-top">
+        <h2 class="uk-panel-title">Pick a location</h2>
+            {% for location in locations %}
+                <h3>{{ location.name }}</h3>
+                <li><a href="/forecast/tidal/{{ date }}/{{ location.keys.daylight }}/">Tidal forecast</a></li>
+            {% endfor %}
+    </div>
+</div>

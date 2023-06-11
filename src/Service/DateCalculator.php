@@ -39,5 +39,17 @@ class DateCalculator
 
     }//end getTime()
 
+    public function getMonthDays($year, $month) {
+        $num = cal_days_in_month(CAL_GREGORIAN, $month, $year);
+        $dates_month = array();
+
+        for ($i = 1; $i <= $num; $i++) {
+            $mktime = mktime(0, 0, 0, $month, $i, $year);
+            $date = date("Ymd", $mktime);
+            $dates_month[] = ['date'=>$date, 'day'=>$i];
+        }
+
+        return $dates_month;
+    }
 
 }//end class
