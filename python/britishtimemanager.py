@@ -26,7 +26,11 @@ class BritishTimeManager:
 
         for event in self.calendar.events:
             event_year = event.begin.date().strftime('%Y')
-            event_timestamp = event.begin.int_timestamp
+            if event.begin.timestamp:
+                event_timestamp = event.begin.timestamp
+            else:
+                event_timestamp = event.begin.int_timestamp
+
             event_name = event.name
             if self.year == event_year:
                 if event_name == 'Start of British Summer Time':

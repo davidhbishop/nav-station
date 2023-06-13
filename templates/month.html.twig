@@ -11,7 +11,7 @@
     </nav>
 </div>
 
-<h2 class="uk-panel-title">Month: {{ year }} / {{ month }}</h2>
+<h2 class="uk-panel-title">{{ calendar.monthOfYear }} {{ calendar.year }}</h2>
 {% for day in days %}
     <a class="uk-button uk-button-primary uk-width-1-6" href="/cal/{{ day.date }}">{{ day.day }}</a>
 {% endfor %}

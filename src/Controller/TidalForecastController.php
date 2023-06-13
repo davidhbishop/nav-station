@@ -24,8 +24,6 @@ class TidalForecastController extends AbstractController
 
         $this->locationService = $locationSevice;
         $this->locationService->setLocationPath(__DIR__.'/../../data/locations/ship-locations.json');
-
-
     }
 
     #[Route('/forecast/tidal/{date}')]

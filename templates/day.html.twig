@@ -6,12 +6,16 @@
         <div class="uk-navbar-left">
             <ul class="uk-navbar-nav">
                 <li><a href="/">Home</a></li>
-                <li><a href="/cal/{{ year }}/{{ month }}">Calendar</a></li>
+                <li><a href="/cal/{{ calendar.year }}/{{ calendar.month }}">Calendar</a></li>
             </ul>
         </div>
     </nav>
 </div>
 
-<a class="uk-button uk-button-primary uk-button-large" href="/forecast/inshore/{{ date }}">Inshore forecasts</a>
+<h2>{{ calendar.dayOfWeek }} {{ calendar.dayOfMonth }} {{ calendar.monthOfYear }} {{ calendar.year }}</h2>
 
-<a class="uk-button uk-button-primary uk-button-large" href="/forecast/tidal/{{ date }}">Tide Tables</a>
+<a class="uk-button uk-button-primary uk-button-large" href="/forecast/inshore/{{ calendar.date }}">Inshore forecasts</a>
+
+<a class="uk-button uk-button-primary uk-button-large" href="/forecast/tidal/{{ calendar.date }}">Tide Tables</a>
+
+<a class="uk-button uk-button-primary uk-button-large" href="/forecast/solar/{{ calendar.date }}">Solar Tables</a>

@@ -1,0 +1,22 @@
+{# templates/forecast/tidal.html.twig #}
+{{ include('system/head.html.twig') }}
+
+<div class="uk-container" >
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/cal/{{ date }}">{{ date }}</a></li>
+                <li><a href="/forecast/inshore/{{ date }}">Go to Inshore</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div>
+    {% for location in locations %}
+        {% for key in location.keys %}
+            <div><a class="uk-button uk-button-primary uk-width-1-1 uk-text-left" href="/forecast/solar/{{ date }}/{{ key.daylight }}/">Solar table for {{ location.name }}</a></div>
+        {% endfor %}
+    {% endfor %}
+</div>

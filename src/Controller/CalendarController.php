@@ -34,7 +34,8 @@ class CalendarController extends AbstractController
         return $this->render('month.html.twig', [
             'days' => $days,
             'year' => $year,
-            'month' => $month
+            'month' => $month,
+            'calendar' => $this->dateCalculator->getDate($year.$month.'01')
         ]);
     }
 
@@ -44,9 +45,7 @@ class CalendarController extends AbstractController
         $year = $this->dateCalculator->extractYear($date);
         $month = $this->dateCalculator->extractMonth($date);
         return $this->render('day.html.twig', [
-            'date' => $date,
-            'year' => $year,
-            'month' => $month
+            'calendar' => $this->dateCalculator->getDate($date)
         ]);
     }
 

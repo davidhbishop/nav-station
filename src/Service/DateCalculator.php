@@ -44,6 +44,19 @@ class DateCalculator
         return substr($date, 4, 2);
     }
 
+    public function getDate($date) {
+        $current_date = date_create($date);
+        return [
+            'year' => date_format($current_date, 'Y'),
+            'month' => date_format($current_date, 'm'),
+            'day' => date_format($current_date, 'd'),
+            'date' => $date,
+            'dayOfWeek' => date_format($current_date, 'D'),
+            'monthOfYear' => date_format($current_date, 'M'),
+            'dayOfMonth' => date_format($current_date, 'jS')
+        ];
+    }
+
 
     /**
      * Get time
