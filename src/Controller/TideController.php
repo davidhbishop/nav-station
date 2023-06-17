@@ -46,7 +46,7 @@ class TideController extends AbstractController
         return $this->render('forecast/tide-table.html.twig', [
             'tides' => $tides,
             'location' => $location,
-            'month' => $dates[array_key_first($dates)]->month,
+            'month' => $dates[array_key_first($dates)]->monthOfYear,
             'year' => $dates[array_key_first($dates)]->year,
         ]);
 
