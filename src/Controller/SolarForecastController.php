@@ -2,38 +2,38 @@
 
 namespace App\Controller;
 
-use App\Service\DateCalculator;
+use App\Service\CalendarService;
 use App\Service\DataService;
-use App\Service\LocationService;
+use App\Service\ConfigurationService;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class SolarForecastController extends AbstractController
 {
-    private DateCalculator $dateCalculator;
+    private CalendarService $calendarService;
     private DataService $dataService;
-    private LocationService $locationService;
+    private ConfigurationService $configurationService;
 
-    public function __construct(DateCalculator $dateCalculator, DataService $dataService, LocationService $locationSevice){
+    public function __construct(CalendarService $calendarService, DataService $dataService, ConfigurationService $locationSevice){
         $dataPath = __DIR__.'/../../data/forecast';
         $this->dataService = $dataService;
         $this->dataService->setDataPath($dataPath);
 
-        $this->dateCalculator = $dateCalculator;
+        $this->calendarService = $calendarService;
 
-        $this->locationService = $locationSevice;
-        $this->locationService->setLocationPath(__DIR__.'/../../data/locations/ship-locations.json');
+        $this->configurationService = $locationSevice;
+        $this->configurationService->setLocationPath(__DIR__.'/../../data/locations/ship-locations.json');
     }
 
     #[Route('/forecast/solar/{date}')]
     public function list($date): Response
     {
-        $locations = $this->locationService->getLocations();
+        $locations = $this->configurationService->getLocations();
         return $this->render('forecast/solar-list.html.twig', [
             'date' => $date,
-            'year' => $this->dateCalculator->extractYear($date),
-            'month' => $this->dateCalculator->extractMonth($date),
+            'year' => $this->calendarService->extractYear($date),
+            'month' => $this->calendarService->extractMonth($date),
             'locations' => $locations,
         ]);
     }
@@ -42,7 +42,7 @@ class SolarForecastController extends AbstractController
     public function forecast($date, $location): Response
     {
         if ($date == 'latest') {
-            $date = $this->dateCalculator->getToday();
+            $date = $this->calendarService->getToday();
         }
         $filters = ['sunset','sunrise','moonrise','moonset'];
 
@@ -57,8 +57,8 @@ class SolarForecastController extends AbstractController
                 'events' => $events,
                 'location' => $location,
                 'date' => $date,
-                'year' => $this->dateCalculator->extractYear($date),
-                'month' => $this->dateCalculator->extractMonth($date),
+                'year' => $this->calendarService->extractYear($date),
+                'month' => $this->calendarService->extractMonth($date),
             ]);
         } else {
             return $this->render('system/error.html.twig');

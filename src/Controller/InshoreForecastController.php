@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Service\DateCalculator;
+use App\Service\CalendarService;
 use App\Service\DataService;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -10,13 +10,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class InshoreForecastController extends AbstractController
 {
-    private DateCalculator $dateCalculator;
+    private CalendarService $calendarService;
     private DataService $dataService;
 
-    public function __construct(DateCalculator $dateCalculator, DataService $dataService){
+    public function __construct(CalendarService $calendarService, DataService $dataService){
         $dataPath = __DIR__.'/../../data/forecast';
         $this->dataService = $dataService;
-        $this->dateCalculator = $dateCalculator;
+        $this->calendarService = $calendarService;
 
         $this->dataService->setDataPath($dataPath);
 
@@ -27,8 +27,8 @@ class InshoreForecastController extends AbstractController
     {
 
         $filters = ['forecast'];
-        $year = $this->dateCalculator->extractYear($date);
-        $month = $this->dateCalculator->extractMonth($date);
+        $year = $this->calendarService->extractYear($date);
+        $month = $this->calendarService->extractMonth($date);
 
         $files = $this->dataService->getFiles($date, 'inshore', $filters);
 
@@ -58,11 +58,11 @@ class InshoreForecastController extends AbstractController
     #[Route('/forecast/inshore/{date}/{area}')]
     public function area($date, $area): Response
     {
-        $year = $this->dateCalculator->extractYear($date);
-        $month = $this->dateCalculator->extractMonth($date);
-        $time = $this->dateCalculator->getTime();
+        $year = $this->calendarService->extractYear($date);
+        $month = $this->calendarService->extractMonth($date);
+        $time = $this->calendarService->getTime();
         if ($date == 'latest') {
-            $date = $this->dateCalculator->getToday();
+            $date = $this->calendarService->getToday();
         }
 
         $this->dataService->setData(

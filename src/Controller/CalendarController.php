@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Service\DateCalculator;
+use App\Service\CalendarService;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -10,17 +10,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class CalendarController extends AbstractController
 {
-    private DateCalculator $dateCalculator;
+    private CalendarService $calendarService;
 
-    public function __construct(DateCalculator $dateCalculator){
-        $this->dateCalculator = $dateCalculator;
+    public function __construct(CalendarService $calendarService){
+        $this->calendarService = $calendarService;
     }
 
     #[Route('/')]
     public function homepage(): Response
     {
-        $year = $this->dateCalculator->getYear();
-        $month = $this->dateCalculator->getMonth();
+        $year = $this->calendarService->getYear();
+        $month = $this->calendarService->getMonth();
         return $this->render('home.html.twig', [
             'year' => $year,
             'month' => $month
@@ -30,22 +30,22 @@ class CalendarController extends AbstractController
     #[Route('/cal/{year}/{month}')]
     public function month($year, $month): Response
     {
-        $days = $this->dateCalculator->getMonthDays($year, $month);
+        $days = $this->calendarService->getMonthDays($year, $month);
         return $this->render('month.html.twig', [
             'days' => $days,
             'year' => $year,
             'month' => $month,
-            'calendar' => $this->dateCalculator->getDate($year.$month.'01')
+            'calendar' => $this->calendarService->getDate($year.$month.'01')
         ]);
     }
 
     #[Route('/cal/{date}')]
     public function day($date): Response
     {
-        $year = $this->dateCalculator->extractYear($date);
-        $month = $this->dateCalculator->extractMonth($date);
+        $year = $this->calendarService->extractYear($date);
+        $month = $this->calendarService->extractMonth($date);
         return $this->render('day.html.twig', [
-            'calendar' => $this->dateCalculator->getDate($date)
+            'calendar' => $this->calendarService->getDate($date)
         ]);
     }
 

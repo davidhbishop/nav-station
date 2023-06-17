@@ -5,7 +5,7 @@ namespace App\Service;
 /**
  * Location Service
  */
-class LocationService
+class ConfigurationService
 {
 
     private $locationPath;
@@ -17,6 +17,7 @@ class LocationService
 
     public function __construct()
     {
+        $this->locationPath = __DIR__.'/../../data/locations/ship-locations.json';
 
     }//end __construct()
 
