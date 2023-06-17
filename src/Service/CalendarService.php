@@ -107,21 +107,11 @@ class CalendarService
 
     public function getDate($dateString) {
         $date = date_create($dateString);
-        return $this->dateArray($date);
+        return $this->returnDate($date);
     }
 
     private function returnDate($date) {
         return new DateModel($date);
-        /*
-        return [
-            'year' => date_format($date, 'Y'),
-            'month' => date_format($date, 'm'),
-            'day' => date_format($date, 'd'),
-            'date' => date_format($date,'Ymd'),
-            'dayOfWeek' => date_format($date, 'D'),
-            'monthOfYear' => date_format($date, 'M'),
-            'dayOfMonth' => date_format($date, 'jS')
-        ];*/
     }
 
 

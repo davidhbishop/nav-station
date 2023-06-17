@@ -24,6 +24,8 @@ class TidalForecast(Forecast):
     def get(self, location):
         if location.has('gate'):
             self.hasGate = True
+        else:
+            self.hasGate = False
 
         tide_events = self._get_events(location.get_key('tidal'))
 

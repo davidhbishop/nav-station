@@ -23,13 +23,42 @@
     ]
   },
   {
-    "name": "Holyhead",
+    "name": "HOLYHEAD",
     "type": "table",
     "keys": [
       {
-        "daylight": "holyhead",
-        "weather": "gckxq8ehx"
+        "tide-times": "holyhead",
+        "tidal": "0478",
+        "metoffice-data": "gckxq8ehx"
       }
     ]
-  }
-]
+  },
+  {
+    "name": "DOVER",
+    "type": "table",
+    "keys": [
+      {
+        "tide-times": "dover",
+        "tidal": "0089"
+      }
+    ]
+  },
+  {
+    "name": "LIVERPOOL",
+    "type": "table",
+    "keys": [
+      {
+        "tide-times": "dover",
+        "tidal": "0451"
+      }
+    ]
+  },
+  {
+    "name": "MILFORDHAVEN",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0496"
+      }
+    ]
+  }]

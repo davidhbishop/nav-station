@@ -107,12 +107,20 @@ class LocationModel
         return $tides;
     }
 
-    public function getTimeTable($date, $location) {
-        $filters = ['highwater','lowwater','gateopen','gateclose','sunset','sunrise','moonrise','moonset'];
+    public function getTimeTable(DateModel $date, $location)
+    {
+        $filters = ['highwater', 'lowwater', 'gateopen', 'gateclose', 'sunset', 'sunrise', 'moonrise', 'moonset'];
 
+        $files = $this->dataService->getFiles($date->date, $location, $filters);
+        $times = array();
+
+        if (count($files) > 0) {
+            foreach ($files as $file) {
+                $times[] = $this->dataService->getJsonFile($date->date, $file);
+            }
+
+        }
+        return $times;
     }
-
-
-
 
 }

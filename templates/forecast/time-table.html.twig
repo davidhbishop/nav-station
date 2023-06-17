@@ -1,0 +1,41 @@
+{# templates/forecast/tidal.html.twig #}
+{{ include('system/head.html.twig') }}
+
+<div class="uk-container" >
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <li><a href="/tide-table">Tides</a></li>
+                <li><a href="/forecast">Forecast</a></li>
+                <li><a href="/boat-log">Boat log</a></li>
+                <li><a href="/navtext">Navtex</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="uk-width-1-1">
+    <div class="uk-panel uk-panel-box uk-margin-top">
+        <h2 class="uk-panel-title">Tide table at <a href="/change-location">{{ location|title }}</a>, {{ date.dayOfWeek }} {{ date.dayOfMonth }} {{ date.monthOfYear }} {{ date.year }}</h2>
+        <table class="uk-table uk-table-striped">
+            <tr><th>Time</th><th>Event</th></tr>
+
+            {% for time in times %}
+                <tr>
+                    <td>{{ time.time }}</td>
+                    {% if time.type == 'LowWater' %}
+                        <td>Low water <strong>{{ time.depth }}m</strong></td>
+                    {% elseif time.type == 'HighWater' %}
+                        <td>High water <strong>{{ time.depth }}m</strong></td>
+                    {% elseif time.type == 'gateclose' %}
+                        <td>Gate closing</td>
+                    {% elseif time.type == 'gateopen' %}
+                        <td>Gate opening</td>
+                    {% else %}
+                        <td>{{ time.type }}</td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>

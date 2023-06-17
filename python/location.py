@@ -5,7 +5,7 @@ class Location:
         self.keys = config['keys'][0]
 
     def get_name(self):
-        return self.name
+        return self.name.replace(' ','')
 
     def has(self, name):
         for key in self.keys:

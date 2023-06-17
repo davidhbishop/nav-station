@@ -1,0 +1,610 @@
+#	Name	Id
+1	Hirta (Bagh A' Bhaile)	0322
+2	Rockall	0324
+3	Cargreen	0014B
+4	PLYMOUTH (DEVONPORT)	0014
+5	Looe	0011
+6	FOWEY	0008
+7	Mevagissey	0007
+8	Truro	0005A
+9	FALMOUTH	0005
+10	Helford River (Entrance)	0004A
+11	Coverack	0004
+12	Lizard Point	0003
+13	Porthleven	0002A
+14	PENZANCE (NEWLYN)	0002
+15	ST. MARY'S	0001
+16	Par	0007A
+17	Lostwithiel	0008A
+18	Whitsand Bay	0012
+19	Saltash	0014A
+20	Cotehele Quay	0014C
+21	Lopwell	0014D
+22	Jupiter Point	0014E
+23	St. Germans	0014F
+24	Turnchapel	0015
+25	Bovisand Pier	0015A
+26	River Yealm Entrance	0017
+27	Salcombe	0020
+28	Start Point	0021
+29	DARTMOUTH	0023
+30	Greenway Quay	0023A
+31	Stoke Gabriel (Duncannon)	0023B
+32	Totnes	0023C
+33	TORQUAY	0025
+34	Teignmouth (Approaches)	0026
+35	Teignmouth (New Quay)	0026A
+36	Exmouth (Approaches)	0026B
+37	Exmouth Dock	0027
+38	Starcross	0027A
+39	Turf Lock	0027B
+40	Topsham	0027C
+41	Lyme Regis	0028
+42	Bridport (West Bay)	0029
+43	Chesil Beach	0030
+44	Chesil Cove	0031
+45	PORTLAND	0033
+46	Lulworth Cove	0034
+47	Mupe Bay	0034A
+48	Swanage	0035
+49	Poole (Entrance)	0036
+50	POOLE HARBOUR	0036A
+51	Pottery Pier	0036B
+52	Wareham (River Frome)	0036C
+53	Cleavel Point	0036D
+54	Bournemouth	0037
+55	Christchurch (Entrance)	0038
+56	Christchurch (Quay)	0038A
+57	Christchurch (Tuckton)	0038B
+58	Hurst Point	0039
+59	LYMINGTON	0040
+60	Bucklers Hard	0042
+61	Stansore Point	0043
+62	Yarmouth	0045
+63	Totland Bay	0046
+64	Freshwater Bay	0048
+65	Ventnor	0051
+66	Sandown	0053
+67	Foreland (Lifeboat Slip)	0053A
+68	Bembridge Approaches	0053B
+69	Bembridge Harbour	0054
+70	Ryde	0058
+71	COWES	0060
+72	Folly Inn	0060A
+73	Newport (Isle Of Wight)	0060B
+74	Calshot Castle	0061
+75	SOUTHAMPTON	0062
+76	Redbridge	0063
+77	WARSASH	0063A
+78	Bursledon	0063B
+79	Lee-On-The-Solent	0064
+80	PORTSMOUTH	0065
+81	PORTSMOUTH (HIGH WATER STAND)	0065A
+82	Langstone Harbour	0066
+83	CHICHESTER HARBOUR (ENTRANCE)	0068
+84	Northney	0068A
+85	Bosham	0068B
+86	Itchenor	0068C
+87	Dell Quay	0068D
+88	Selsey Bill	0069
+89	Nab Tower	0070
+90	Pagham	0072
+91	Bognor Regis	0073
+92	Littlehampton	0074
+93	Arundel	0074B
+94	Worthing	0075
+95	SHOREHAM	0081
+96	Brighton Marina	0082
+97	NEWHAVEN	0083
+98	Eastbourne	0084
+99	Sovereign Harbour	0084A
+100	Hastings	0085
+101	Rye (Approaches)	0086
+102	Rye (Harbour)	0086A
+103	Dungeness	0087
+104	Folkestone	0088
+105	DOVER	0089
+106	Deal	0098
+107	Richborough	0099
+108	RAMSGATE	0102
+109	Broadstairs	0102A
+110	MARGATE	0103
+111	Herne Bay	0104
+112	Whitstable Approaches	0105
+113	Grovehurst Jetty	0106
+114	Faversham	0107
+115	SHEERNESS	0108
+116	Bee Ness	0108A
+117	Bartlett Creek	0108B
+118	Darnett Ness	0108C
+119	Chatham (Lock Approaches)	0109
+120	Upnor	0109A
+121	Rochester (Strood Pier)	0109B
+122	Wouldham	0109C
+123	New Hythe	0109D
+124	Allington Lock	0109E
+125	Southend-On-Sea	0110
+126	CORYTON	0110A
+127	TILBURY	0111
+128	Gravesend	0111A
+129	Erith	0111B
+130	NORTH WOOLWICH	0112
+131	LONDON BRIDGE (TOWER PIER)	0113
+132	Chelsea Bridge	0113A
+133	Albert Bridge	0114
+134	Hammersmith Bridge	0115
+135	Kew Bridge	0115A
+136	Richmond Lock	0116
+137	Shivering Sand	0116A
+138	S.E. Long Sand	0117
+139	Whitaker Beacon	0121
+140	Holliwell Point	0121A
+141	Rochford	0121B
+142	BURNHAM-ON-CROUCH	0122
+143	North Fambridge	0122A
+144	Hullbridge	0122B
+145	Battlesbridge	0122C
+146	Bradwell Waterside	0123
+147	Osea Island	0123A
+148	Maldon	0123B
+149	West Mersea	0124
+150	Brightlingsea	0126
+151	Colchester	0127
+152	Clacton-On-Sea	0128
+153	WALTON-ON-THE-NAZE	0129
+154	Bramble Creek	0129A
+155	Sunk Head	0130
+156	HARWICH	0131
+157	Mistley	0132
+158	Ipswich	0133
+159	FELIXSTOWE PIER	0133A
+160	Woodbridge Haven	0134
+161	Woodbridge	0134A
+162	Bawdsey	0135
+163	Orford Haven Bar	0136
+164	Orford Quay	0136A
+165	Slaughden Quay	0136B
+166	Iken Cliffs	0136C
+167	Orford Ness	0137
+168	Aldeburgh	0139
+169	Minsmere Sluice	0139A
+170	Southwold	0140
+171	LOWESTOFT	0141
+172	GREAT YARMOUTH (GORLESTON-ON-SEA)	0142
+173	Great Yarmouth (Britannia Pier)	0142A
+174	Caister-On-Sea	0143
+175	Winterton-On-Sea	0144
+176	Cromer	0154
+177	Blakeney Bar	0155
+178	Blakeney	0155A
+179	Wells Bar	0157
+180	Wells	0157A
+181	Burnham (Overy Staithe)	0158
+182	Hunstanton	0161
+183	West Stones	0161A
+184	King's Lynn	0162
+185	Outer Westmark Knock	0163
+186	Wisbech Cut	0163A
+187	Port Sutton Bridge	0164
+188	Wisbech	0164A
+189	Lawyer's Creek	0164B
+190	Fosdyke Bridge	0164C
+191	Tabs Head	0165
+192	BOSTON	0166
+193	Skegness	0167
+194	Inner Dowsing Light	0168
+195	SPURN HEAD	0171
+196	Bull Sand Fort	0171A
+197	Sunk Dredged Channel	0171B
+198	GRIMSBY	0172
+199	HUMBER SEA TERMINAL	0172A
+200	IMMINGHAM	0173
+201	HULL (KING GEORGE DOCK)	0174
+202	Hull (Alexandra Dock)	0174A
+203	HULL (ALBERT DOCK)	0175
+204	Humber Bridge	0176
+205	Brough	0176A
+206	Burton Stather	0177
+207	FLIXBOROUGH WHARF	0177A
+208	Keadby	0178
+209	Owston Ferry	0178A
+210	Blacktoft	0179
+211	GOOLE	0180
+212	Bridlington	0181
+213	Filey Bay	0182
+214	Scarborough	0183
+215	Whitby	0184
+216	RIVER TEES ENTRANCE	0185
+217	Middlesbrough (Dock Entrance)	0186
+218	Tees (Newport) Bridge	0187
+219	Hartlepool	0188
+220	Seaham	0189
+221	SUNDERLAND	0190
+222	RIVER TYNE (NORTH SHIELDS)	0202
+223	Newcastle-Upon-Tyne	0203
+224	BLYTH	0204
+225	Coquet Island	0205
+226	Amble	0206
+227	North Sunderland (Northumberland)	0207
+228	Holy Island	0208
+229	Berwick	0209
+230	Eyemouth	0221
+231	Dunbar	0222
+232	Fidra	0223
+233	Cockenzie	0224
+234	LEITH	0225
+235	Granton	0226
+236	ROSYTH	0227
+237	GRANGEMOUTH	0228
+238	Kincardine	0229
+239	Alloa	0229A
+240	Stirling	0229B
+241	Burntisland	0230
+242	Kirkcaldy	0231
+243	Methil	0232
+244	Anstruther Easter	0233
+245	River Tay Bar	0235
+246	DUNDEE	0236
+247	Newburgh	0236A
+248	Perth	0236B
+249	Arbroath	0241
+250	MONTROSE	0242
+251	Stonehaven	0243
+252	ABERDEEN	0244
+253	PETERHEAD	0245
+254	FRASERBURGH	0246
+255	Banff	0247
+256	Whitehills	0247A
+257	Buckie	0248
+258	Lossiemouth	0249
+259	Burghead	0250
+260	Nairn	0253
+261	WHITENESS HEAD	0254
+262	Fortrose	0255
+263	Inverness	0256
+264	Cromarty	0258
+265	INVERGORDON	0259
+266	Dingwall (Cromarty Firth)	0260
+267	Portmahomack	0261
+268	Meikle Ferry	0262
+269	Golspie	0264
+270	Helmsdale	0265
+271	STORNOWAY	0308
+272	Loch Shell	0309
+273	East Loch Tarbert, Outer Hebrides	0310
+274	Leverburgh	0310A
+275	Bays Loch	0310B
+276	Lochmaddy	0311
+277	Loch Carnan	0311A
+278	Loch Skipport	0312
+279	Loch Boisdale	0313
+280	Barra (North Bay)	0314
+281	Castlebay	0314A
+282	Barra Head	0316
+283	Shillay	0317
+284	Balivanich	0318
+285	Scolpaig	0318A
+286	West Loch Tarbert	0320
+287	Little Bernera	0321
+288	Carloway	0321A
+289	Flannan Isles	0323
+290	Loch Nedd	0330
+291	Loch Inver	0332
+292	Tanera Mor	0333
+293	ULLAPOOL	0334
+294	Mellon Charles	0336
+295	Nato Jetty	0336A
+296	Gairloch	0337
+297	Shieldaig	0338
+298	Applecross	0338A
+299	Plockton	0339
+300	Loch A' Bhraige	0340
+301	Broadford Bay	0341
+302	Portree	0342
+303	Loch Snizort (Uig Bay)	0343
+304	Loch Dunvegan	0344
+305	Loch Harport	0345
+306	Camus Nan Gall	0346
+307	Kyle Of Lochalsh	0349
+308	Dornie Bridge	0349A
+309	Glenelg Bay	0351
+310	Loch Hourn	0352
+311	Inverie Bay	0353
+312	Mallaig	0353A
+313	Loch Scresort	0353B
+314	Bay Of Laig	0354
+315	Galmisdale Pier	0354A
+316	Loch Moidart	0355
+317	Loch Eatharna	0356
+318	Gott Bay	0357
+319	Carsaig Bay (Mull)	0359
+320	Iona	0360
+321	Bunessan	0361
+322	Sound Of Ulva	0362
+323	Salen	0363
+324	Tobermory	0364
+325	Salen (Sound Of Mull)	0364A
+326	Loch Aline	0365
+327	Craignure	0365A
+328	Corran	0367
+329	Corpach	0368
+330	Loch Eil Head	0368A
+331	Loch Leven Head	0369
+332	Port Appin	0370
+333	Barcaldine Pier	0370A
+334	Loch Creran Head	0370B
+335	Dunstaffnage Bay	0371
+336	Connel	0371A
+337	Ardchattan Point	0371B
+338	Bonawe	0371C
+339	Rubha Na Creige	0371D
+340	OBAN	0372
+341	Seil Sound	0373
+342	Scalasaig	0374
+343	Glengarrisdale Bay	0375
+344	Rubh' A' Mhail	0377
+345	Ardnave Point	0378
+346	Orsay	0379
+347	Bruichladdich	0380
+348	Port Ellen	0381
+349	Port Askaig	0382
+350	Craighouse	0383
+351	Loch Melfort	0383A
+352	Loch Beag	0384
+353	Carsaig Bay	0387
+354	Sound Of Gigha	0389
+355	Machrihanish	0390
+356	Southend (Kintyre)	0391
+357	CAMPBELTOWN	0393
+358	Carradale	0393A
+359	Loch Ranza	0393B
+360	East Loch Tarbert, Loch Fyne	0394
+361	Inveraray	0395
+362	Rubha A' Bhodaich	0396
+363	Tighnabruaich	0396A
+364	MILLPORT	0398
+365	Rothesay Bay	0399
+366	Wemyss Bay	0399A
+367	COULPORT	0399B
+368	Lochgoilhead	0399C
+369	Arrochar	0401
+370	Rosneath	0402
+371	Rhu Marina	0402A
+372	Faslane	0402B
+373	Garelochhead	0402C
+374	Helensburgh	0403
+375	GREENOCK	0404
+376	Port Glasgow	0405
+377	Bowling	0406
+378	Clydebank (Rothesay Dock)	0406A
+379	GLASGOW	0407
+380	Brodick Bay	0408
+381	Lamlash	0409
+382	Ardrossan	0410
+383	Irvine	0411
+384	Troon	0412
+385	Ayr	0413
+386	Girvan	0414
+387	STRANRAER	0414A
+388	Portpatrick	0415
+389	Drummore	0419
+390	Luce Bay (Offshore Platform)	0420
+391	Port William	0420A
+392	Isle Of Whithorn	0421
+393	Garlieston	0422
+394	Kirkcudbright Bay	0422A
+395	Hestan Island	0424
+396	Southerness Point	0425
+397	Annan Waterfoot	0426
+398	Torduff Point	0430
+399	Redkirk	0431
+400	Silloth	0432
+401	Maryport	0433
+402	Workington	0434
+403	Whitehaven	0435
+404	Tarn Point	0436
+405	Duddon Bar	0437
+406	BARROW (RAMSDEN DOCK)	0439
+407	Roa Island	0439A
+408	Haws Point	0439B
+409	Halfway Shoal	0439C
+410	Ulverston	0440
+411	Arnside	0440A
+412	Morecambe	0440B
+413	Heysham	0441
+414	Glasson Dock	0442
+415	Lancaster	0442A
+416	Wyre Lighthouse	0443
+417	Fleetwood	0444
+418	Blackpool	0445
+419	Preston	0446
+420	Southport	0447
+421	Formby	0448
+422	LIVERPOOL (GLADSTONE DOCK)	0451
+423	Seacombe (Alfred Dock)	0452
+424	Garston	0452A
+425	EASTHAM	0453
+426	Hale Head	0455
+427	Widnes	0456
+428	Fiddler's Ferry	0456A
+429	Hilbre Island	0461
+430	Chester	0462
+431	Connah's Quay	0463
+432	MOSTYN DOCKS	0464
+433	Colwyn Bay	0470
+434	Llandudno	0471
+435	Conwy	0471A
+436	Beaumaris	0472
+437	Menai Bridge	0473
+438	Port Dinorwic	0474
+439	Caernarfon	0475
+440	Fort Belan	0475A
+441	Trwyn Dinmor	0476
+442	Moelfre	0476A
+443	Amlwch	0477
+444	Cemaes Bay	0477A
+445	HOLYHEAD	0478
+446	Trearddur Bay	0479
+447	Porth Trecastell	0479A
+448	Llanddwyn Island	0480
+449	Trefor	0480A
+450	Porth Dinllaen	0481
+451	Porth Ysgaden	0481A
+452	Bardsey Island	0482
+453	Aberdaron	0482A
+454	St. Tudwal's Roads	0482B
+455	Pwllheli	0483
+456	Criccieth	0483A
+457	Porthmadog	0484
+458	Barmouth	0485
+459	Aberdovey	0486
+460	Aberystwyth	0487
+461	New Quay	0488
+462	Aberporth	0488A
+463	Port Cardigan	0489
+464	Cardigan (Town)	0489A
+465	FISHGUARD	0490
+466	Porthgain	0491
+467	Ramsey Sound	0492
+468	Solva	0492A
+469	Little Haven	0492B
+470	Martin's Haven	0493
+471	Skomer Island	0494
+472	Dale Roads	0495
+473	MILFORD HAVEN	0496
+474	Neyland	0497
+475	Black Tar	0498
+476	Haverfordwest	0499
+477	Stackpole Quay	0501
+478	Tenby	0502
+479	Ferryside	0504
+480	Carmarthen	0504A
+481	Burry Port	0505
+482	Llanelli	0505A
+483	Mumbles	0508
+484	SWANSEA	0509
+485	River Neath Entrance	0509A
+486	PORT TALBOT	0510
+487	Porthcawl	0512
+488	Barry	0513
+489	Flat Holm	0513A
+490	Steep Holm	0513B
+491	CARDIFF	0514
+492	NEWPORT	0515
+493	Chepstow	0516
+494	Sudbrook	0517
+495	Beachley (Aust)	0518
+496	Inward Rocks	0519
+497	Narlwood Rocks	0520
+498	White House	0521
+499	Berkeley	0522
+500	Sharpness Dock	0522A
+501	Wellhouse Rock	0522B
+502	Epney	0522C
+503	Minsterworth	0522D
+504	Llanthony	0522E
+505	PORT OF BRISTOL (AVONMOUTH)	0523
+506	Shirehampton	0523A
+507	Sea Mills	0523B
+508	Cumberland Basin Entrance	0524
+509	Portishead	0524A
+510	Clevedon	0525
+511	St. Thomas's Head	0525A
+512	English And Welsh Grounds	0526
+513	Weston-Super-Mare	0527
+514	Burnham-On-Sea	0528
+515	Bridgwater	0529
+516	Hinkley Point	0530
+517	Watchet	0531
+518	Minehead	0532
+519	Porlock Bay	0533
+520	Lynmouth	0534
+521	Ilfracombe	0535
+522	Appledore	0536
+523	Yelland Marsh	0537
+524	Fremington	0538
+525	Barnstaple	0539
+526	Bideford	0540
+527	Clovelly	0541
+528	Lundy	0542
+529	Bude	0543
+530	Boscastle	0544
+531	Port Isaac	0544A
+532	Padstow	0545
+533	Wadebridge	0545A
+534	NEWQUAY	0546
+535	Perranporth	0546A
+536	St. Ives	0547
+537	Cape Cornwall	0547A
+538	Sennen Cove	0548
+539	Cranfield Point	0627
+540	WARRENPOINT	0628
+541	Newry (Victoria Lock)	0628A
+542	Kilkeel	0629
+543	Newcastle (N.Ireland)	0630
+544	Killough Harbour	0630A
+545	Ardglass	0631
+546	Killard Point	0632
+547	Strangford	0633
+548	Quoile Barrier	0633A
+549	Killyleagh	0634
+550	South Rock	0635
+551	Portavogie	0636
+552	Donaghadee	0637
+553	Bangor	0637A
+554	BELFAST	0638
+555	Carrickfergus	0639
+556	LARNE	0641
+557	Red Bay	0643
+558	Cushendun	0644
+559	Ballycastle Bay	0651
+560	Portrush	0652
+561	Coleraine	0653
+562	Culmore Point	0657
+563	RIVER FOYLE (LISAHALLY)	0658
+564	Londonderry	0659
+565	Loth	0274
+566	Whitehall	0273B
+567	Egilsay	0273A
+568	KIRKWALL	0273
+569	Deer Sound	0272
+570	Burray Ness	0271
+571	Muckle Skerry	0270
+572	Duncansby Head	0268
+573	WICK	0267
+574	Kettletoft Pier	0275
+575	Rapness	0276
+576	Pierowall	0277
+577	Tingwall	0279
+578	Stromness	0280
+579	ST. MARY'S (SCAPA FLOW)	0281
+580	Widewall Bay	0282
+581	Bur Wick	0282A
+582	Fair Isle	0285
+583	Sumburgh (Grutness Voe)	0285A
+584	LERWICK	0287
+585	Dury Voe	0288
+586	Out Skerries	0289
+587	Toft Pier	0289A
+588	Burra Voe (Yell Sound)	0290
+589	Mid Yell	0290A
+590	Baltasound Pier	0290B
+591	Burra Firth	0291
+592	Cullivoe	0292
+593	SULLOM VOE	0293
+594	Esha Ness (Hamna Voe)	0293A
+595	Hillswick	0294
+596	West Burra Firth	0294A
+597	Scalloway	0295
+598	Bay Of Quendale	0296
+599	Foula	0296A
+600	Stroma	0297
+601	Gills Bay	0297A
+602	SCRABSTER	0298
+603	Sule Skerry	0299
+604	Portnancon	0300
+605	Kyle Of Durness	0301
+606	Rona	0304
+607	Kinlochbervie	0327
+608	Loch Laxford	0328
+609	Badcall Bay	0329

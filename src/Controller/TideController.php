@@ -34,7 +34,7 @@ class TideController extends AbstractController
 
         //If no location then redirect to select location
         if (!$location) {
-            return $this->locations();
+            return $this->changeLocation();
         }
 
         //Get the current date
@@ -53,13 +53,32 @@ class TideController extends AbstractController
     }
 
     #[Route('/tide-table/{location}/{date}')]
-    public function times($location, $date): Repsponse {
+    public function times($location, $date): Response {
         $location = $this->preferenceService->getLocation();
-
         $date = $this->calendarService->getDate($date);
 
+        $times = $this->locationModel->getTimeTable($date, $location);
 
-
+        return $this->render('forecast/time-table.html.twig', [
+            'times' => $times,
+            'location' => $location,
+            'date' => $date->asArray(),
+        ]);
     }
 
+    #[Route('/change-location')]
+    public function changeLocation(): Response
+    {
+        $locations = $this->configurationService->getLocations();
+        return $this->render('locations.html.twig', [
+            'locations' => $locations
+        ]);
+    }
+
+    #[Route('/set-location/{location}')]
+    public function setLocation($location): Response
+    {
+        $this->preferenceService->setLocation($location);
+        return $this->table();
+    }
 }

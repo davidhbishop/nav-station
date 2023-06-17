@@ -23,12 +23,383 @@
     ]
   },
   {
-    "name": "Holyhead",
+    "name": "HOLYHEAD",
     "type": "table",
     "keys": [
       {
         "tide-times": "holyhead",
+        "tidal": "0478",
         "metoffice-data": "gckxq8ehx"
+      }
+    ]
+  },
+  {
+    "name": "DOVER",
+    "type": "table",
+    "keys": [
+      {
+        "tide-times": "dover",
+        "tidal": "0089"
+      }
+    ]
+  },
+  {
+    "name": "Colwyn Bay",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0470"
+      }
+    ]
+  },
+  {
+    "name": "Llandudno",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0471"
+      }
+    ]
+  },
+  {
+    "name": "Beaumaris",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0472"
+      }
+    ]
+  },
+  {
+    "name": "Menai Bridge",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0473"
+      }
+    ]
+  },
+  {
+    "name": "Port Dinorwic",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0474"
+      }
+    ]
+  },
+  {
+    "name": "Caernarfon",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0475"
+      }
+    ]
+  },
+  {
+    "name": "Fort Belan",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0475A"
+      }
+    ]
+  },
+  {
+    "name": "Trwyn Dinmor",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0476"
+      }
+    ]
+  },
+  {
+    "name": "Moelfre",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0476A"
+      }
+    ]
+  },
+  {
+    "name": "Amlwch",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0477"
+      }
+    ]
+  },
+  {
+    "name": "Cemaes Bay",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0477A"
+      }
+    ]
+  },
+  {
+    "name": "HOLYHEAD",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0478"
+      }
+    ]
+  },
+  {
+    "name": "Trearddur Bay",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0479"
+      }
+    ]
+  },
+  {
+    "name": "Porth Trecastell",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0479A"
+      }
+    ]
+  },
+  {
+    "name": "Llanddwyn Island",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0480"
+      }
+    ]
+  },
+  {
+    "name": "Trefor",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0480A"
+      }
+    ]
+  },
+  {
+    "name": "Porth Dinllaen",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0481"
+      }
+    ]
+  },
+  {
+    "name": "Porth Ysgaden",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0481A"
+      }
+    ]
+  },
+  {
+    "name": "Bardsey Island",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0482"
+      }
+    ]
+  },
+  {
+    "name": "Aberdaron",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0482A"
+      }
+    ]
+  },
+  {
+    "name": "St. Tudwal's Roads",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0482B"
+      }
+    ]
+  },
+  {
+    "name": "Pwllheli",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0483"
+      }
+    ]
+  },
+  {
+    "name": "Criccieth",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0483A"
+      }
+    ]
+  },
+  {
+    "name": "Porthmadog",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0484"
+      }
+    ]
+  },
+  {
+    "name": "Barmouth",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0485"
+      }
+    ]
+  },
+  {
+    "name": "Aberdovey",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0486"
+      }
+    ]
+  },
+  {
+    "name": "Aberystwyth",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0487"
+      }
+    ]
+  },
+  {
+    "name": "New Quay",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0488"
+      }
+    ]
+  },
+  {
+    "name": "Aberporth",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0488A"
+      }
+    ]
+  },
+  {
+    "name": "Port Cardigan",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0489"
+      }
+    ]
+  },
+  {
+    "name": "Cardigan (Town)",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0489A"
+      }
+    ]
+  },
+  {
+    "name": "FISHGUARD",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0490"
+      }
+    ]
+  },
+  {
+    "name": "Porthgain",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0491"
+      }
+    ]
+  },
+  {
+    "name": "Ramsey Sound",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0492"
+      }
+    ]
+  },
+  {
+    "name": "Solva",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0492A"
+      }
+    ]
+  },
+  {
+    "name": "Little Haven",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0492B"
+      }
+    ]
+  },
+  {
+    "name": "Martin's Haven",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0493"
+      }
+    ]
+  },
+  {
+    "name": "Skomer Island",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0494"
+      }
+    ]
+  },
+  {
+    "name": "Dale Roads",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0495"
+      }
+    ]
+  },
+  {
+    "name": "MILFORD HAVEN",
+    "type": "table",
+    "keys": [
+      {
+        "tidal": "0496"
       }
     ]
   }
