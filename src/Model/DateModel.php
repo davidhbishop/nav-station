@@ -21,4 +21,16 @@ class DateModel
         $this->dayOfMonth = date_format($date, 'jS');
     }
 
+    public function asArray() {
+        return [
+            'year' => $this->year,
+            'month' => $this->month,
+            'day' => $this->day,
+            'date' => $this->date,
+            'dayOfWeek' => $this->dayOfWeek,
+            'monthOfYear' => $this->monthOfYear,
+            'dayOfMonth' => $this->dayOfMonth,
+        ];
+    }
+
 }

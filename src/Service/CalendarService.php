@@ -59,7 +59,8 @@ class CalendarService
             for ($i = $day; $i <= ($day+7); $i++) {
 
                 //Add an array of useful values for the current day
-                $output[] = $this->generateDate($year, $month, $i);
+                $value = $this->generateDate($year, $month, $i);
+                $output[$value->date] = $value;
 
             }
 
