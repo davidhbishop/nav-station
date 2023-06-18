@@ -27,9 +27,22 @@ class LocationModel
         //Remove low water
         $days = $this->highTides($days);
 
+        //Remove colon from time
+        $days = $this->removeColonFromTime($days);
+
         //Add date values
         $days = $this->addDateFormats($dates, $days);
 
+
+        return $days;
+    }
+
+    private function removeColonFromTime($days) {
+        foreach($days as $day => $tides){
+            foreach($tides as $time => $tide) {
+                    $days[$day][$time]["time"] = str_replace(':','',$days[$day][$time]["time"]);
+            }
+        }
         return $days;
     }
 
@@ -51,7 +64,7 @@ class LocationModel
                     $lastLowWater = $tide["depth"];
                 }
                 if ($tide["type"]=='HighWater') {
-                    $days[$day][$time]["range"] = $tide["depth"] - $lastLowWater;
+                    $days[$day][$time]["range"] = round($tide["depth"] - $lastLowWater);
                 }
             }
         }
@@ -70,6 +83,7 @@ class LocationModel
 
                 //If high tide then keep
                 if ($tide["type"]=='HighWater') {
+                    $tide["depth"]=round($tide["depth"],1);
                     $highTides[$time] = $tide;
                 }
 

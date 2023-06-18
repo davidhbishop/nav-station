@@ -14,26 +14,33 @@
     </nav>
 </div>
 
-<h2 class="uk-panel-title">Tide table at <a href="/change-location">{{ location|title }}</a>, {{ month|title }} {{ year }}</h2>
-<table class="uk-table uk-table-striped">
-    <tr>
-        <th>Date</th>
-        <th>Time</th>
-        <th>High Water</th>
-        <th>Range</th>
+<h2>Tide table at <a href="/change-location">{{ location|title }}</a>, {{ month|title }} {{ year }}</h2>
+<table class="uk-table uk-table-condensed">
+    <tr style="background-color:navy;color:white">
+        <th class="uk-width-1-5">DATE</th>
+        <th class="uk-width-1-5">TIME</th>
+        <th class="uk-width-1-5">HIGH WATER</th>
+        <th class="uk-width-1-5">RANGE</th>
+        <th class="uk-width-1-5"></th>
     </tr>
 
     {% for day in tides %}
-        {% for key, data in day %}
-            {% if key != "date"%}
-                <tr>
-                    <td>{{ day.date.dayOfWeek }} {{ day.date.dayOfMonth }}</td>
-                    <td>{{ data.time }}</td>
-                    <td>{{ data.depth }}m</td>
-                    <td>{{ data.range }}m</td>
-                    <td><a href="/tide-table/{{ location }}/{{ day.date.date }}">View</a></td>
-                </tr>
-            {% endif %}
-        {% endfor %}
+            <tr>
+                <td class="uk-text-large"><strong>{{ day.date.day }}</strong><br/>{{ day.date.dayOfWeek }} </td>
+                <td colspan="4">
+                    <table class="uk-table uk-table-condensed">
+                        {% for key, data in day %}
+                            {% if key != "date"%}
+                                <tr>
+                                    <td class="uk-width-1-4">{{ data.time }}</td>
+                                    <td class="uk-width-1-4">{{ data.depth }}</td>
+                                    <td class="uk-width-1-4">{{ data.range }}m</td>
+                                    <td class="uk-width-1-4"><a class="uk-button uk-button-small" href="/tide-table/{{ location }}/{{ day.date.date }}">View</a></td>
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </table>
+                </td>
+            </tr>
     {% endfor %}
 </table>
