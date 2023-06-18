@@ -14,11 +14,15 @@
     </nav>
 </div>
 
-<h2>Tide table at <a href="/change-location">{{ location|title }}</a>, {{ date.dayOfWeek }} {{ date.dayOfMonth }} {{ date.monthOfYear }} {{ date.year }}</h2>
+<h1>{{ date.dayOfWeek }}, {{ date.day }} {{ date.monthOfYear }}</h1>
+<h2 style="color:navy">{{ location|title }}</h2>
+<p><a href="/change-location">Change location</a></p>
+
+
 <table class="uk-table">
     <tr style="background-color:navy;color:white">
-        <th>TIME</th>
-        <th>EVENT</th>
+        <th>Time</th>
+        <th></th>
     </tr>
 
     {% for time in times %}
@@ -36,6 +40,8 @@
                 <td>GATE closing</td>
             {% elseif time.type == 'gateopen' %}
                 <td>GATE opening</td>
+            {% elseif time.type == 'moonrise' %}
+                <td>{{ time.type }} {{ time.phase }}</td>
             {% else %}
                 <td>{{ time.type }}</td>
             {% endif %}

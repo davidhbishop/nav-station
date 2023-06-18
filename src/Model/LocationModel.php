@@ -62,6 +62,7 @@ class LocationModel
             foreach($tides as $time => $tide) {
                 if ($tide["type"]=='LowWater') {
                     $lastLowWater = $tide["depth"];
+                    $days[$day][$time]["range"] = '';
                 }
                 if ($tide["type"]=='HighWater') {
                     $days[$day][$time]["range"] = round($tide["depth"] - $lastLowWater);

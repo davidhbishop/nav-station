@@ -1,3 +1,9 @@
 .font-forecast {
     font-family: monospace;
 }
+.uk-table {
+    margin-bottom: 0px;
+}
+td.uk-no-border {
+    border-bottom: 0px none white ;
+}

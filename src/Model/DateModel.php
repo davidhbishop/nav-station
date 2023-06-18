@@ -17,7 +17,7 @@ class DateModel
         $this->day = date_format($date, 'd');
         $this->date = date_format($date,'Ymd');
         $this->dayOfWeek = date_format($date, 'D');
-        $this->monthOfYear = date_format($date, 'M');
+        $this->monthOfYear = date_format($date, 'F');
         $this->dayOfMonth = date_format($date, 'jS');
     }
 

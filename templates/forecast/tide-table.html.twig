@@ -14,14 +14,17 @@
     </nav>
 </div>
 
-<h2>Tide table at <a href="/change-location">{{ location|title }}</a>, {{ month|title }} {{ year }}</h2>
-<table class="uk-table uk-table-condensed">
+    <h1 style="color:navy">{{ location|title }}</h1>
+    <h2>{{ month|title }} {{ year }}</h2>
+    <p><a href="/change-location">Change location</a></p>
+
+
+<table class="uk-table">
     <tr style="background-color:navy;color:white">
-        <th class="uk-width-1-5">DATE</th>
-        <th class="uk-width-1-5">TIME</th>
-        <th class="uk-width-1-5">HIGH WATER</th>
-        <th class="uk-width-1-5">RANGE</th>
-        <th class="uk-width-1-5"></th>
+        <th class="uk-width-1-4">Date</th>
+        <th class="uk-width-1-4">HW</th>
+        <th class="uk-width-1-4">m</th>
+        <th class="uk-width-1-4">Range</th>
     </tr>
 
     {% for day in tides %}
@@ -32,10 +35,9 @@
                         {% for key, data in day %}
                             {% if key != "date"%}
                                 <tr>
-                                    <td class="uk-width-1-4">{{ data.time }}</td>
-                                    <td class="uk-width-1-4">{{ data.depth }}</td>
-                                    <td class="uk-width-1-4">{{ data.range }}m</td>
-                                    <td class="uk-width-1-4"><a class="uk-button uk-button-small" href="/tide-table/{{ location }}/{{ day.date.date }}">View</a></td>
+                                    <td class="uk-width-1-3 uk-no-border"><a href="/tide-table/{{ location }}/{{ day.date.date }}">{{ data.time }}</a></td>
+                                    <td class="uk-width-1-3 uk-no-border">{{ data.depth }}</td>
+                                    <td class="uk-width-1-3 uk-no-border">{{ data.range }}</td>
                                 </tr>
                             {% endif %}
                         {% endfor %}
