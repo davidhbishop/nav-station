@@ -13,7 +13,8 @@ class BritishTimeManager:
         self.date_time = self._get_datetime_from_tidaltime(self.time_raw)
         self.time_stamp = self.date_time.timestamp()
         self.year = self.date_time.strftime("%Y")
-        self.is_summer = self._get_summer()
+        self.is_summer = True
+        #self._get_summer()
         self.corrected_time = self._set_corrected_time()
 
     def _set_corrected_time(self):
