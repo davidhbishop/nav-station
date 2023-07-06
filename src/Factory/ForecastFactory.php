@@ -20,7 +20,7 @@ interface ForecastFactory
  */
 class InshoreForecastFactory implements ForecastFactory
 {
-    public function loadForecast(): Forecast
+    public function createForecast(): Forecast
     {
         return new InshoreForecast();
     }
